@@ -76,6 +76,7 @@ a {
 }
 
 .main-text {
+    margin-top: 30%;
     max-width: 600px;
     text-align: center;
     margin: 0 auto;
@@ -221,7 +222,7 @@ color: #DEAE66;
     }
 
     .form-container form:hover {
-        transform: scale(1.05);
+        transform: scale(2.05);
         border: 1px solid black;
     }
 
@@ -291,6 +292,9 @@ color: #DEAE66;
     .form-container .button2:hover {
         background-color: red;
         color: white;
+    }
+    .main-content{
+        margin-top: -30%;
     }
 }
 

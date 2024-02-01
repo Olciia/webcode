@@ -117,7 +117,7 @@ color: #DEAE66;
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 60px;
+        top: 100px;
         left: 0;
         width: 100%;
         background-color: #1E1E1E;
@@ -203,10 +203,12 @@ color: #DEAE66;
     }
 
     .form-container {
+        margin: 0;
         display: none;
     }
 
     .form-container form {
+        margin: 30px;
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -432,10 +434,12 @@ color: #DEAE66;
   }
   @media screen and (max-width: 768px) {
     #nowa-oferta {
-      grid-template-columns: 0.9fr; /* Zmiana na jedną kolumnę */
+        margin: 0;
+      grid-template-columns: 1fr; /* Zmiana na jedną kolumnę */
     }
     #opis-firmy{
         margin: 40px;
+        margin-left: 0;
     }
   }
 
@@ -498,7 +502,7 @@ a:hover {
 
     .zaleta {
         width: 100%;
-        margin: 10px 0; /* Poprawione, aby zachować jednolitość */
+        margin: 30px 0; /* Poprawione, aby zachować jednolitość */
     }
 }
 

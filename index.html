@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d01e22a597.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/YourActualKitID.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <title>Webcode</title>
+    <link rel="shortcut icon" href="2.png" type="image/x-icon">
+</head>
+<body>
+
+<div class="navbar">
+    <div class="logo">
+        <img src="Projekt bez nazwy.png" alt="Logo Firmy">
+    </div>
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <div class="menu">
+        <ul>  
+            <li><a href="#oferta">Oferta</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+        <div class="language-toggle">
+            <button onclick="toggleLanguage()">Toggle Language</button>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="box">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="main-text">
+            <p>Przenoś i rozwijaj swoją firmę w internecie razem z nami.</p>
+        <div class="main-button">
+            <button onclick="showForm()">Zapytaj o wycenę</button>
+        </div>
+        </div>
+        <div class="form-container" id="formContainer">
+            <form class="form">
+              <label for="name" class="label">Imię:</label>
+              <input type="text" id="name" name="name" class="field" required>
+          
+              <label for="surname" class="label">Nazwisko:</label>
+              <input type="text" id="surname" name="surname" class="field" required>
+          
+              <label for="phone" class="label">Numer telefonu:</label>
+              <input type="tel" id="phone" name="phone" class="field" required>
+          
+              <label for="email" class="label">Adres e-mail:</label>
+              <input type="email" id="email" name="email" class="field" required>
+          
+              <label for="subject" class="label">Temat zapytania:</label>
+              <input type="text" id="subject" name="subject" class="field" required>
+          
+              <label class="label">
+                <input type="checkbox" class="checkbox" required> Akceptuję regulamin
+              </label>
+          
+              <div class="btn">
+                <button type="submit" class="button1">Wyślij</button>
+                <button type="button" onclick="hideForm()" class="button2">Anuluj</button>
+              </div>
+            </form>
+          </div>          
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:adres@email.com"><i class="fas fa-envelope"></i></a>
+            <a href="tel:+123456789"><i class="fas fa-phone"></i></a>
+        </div>
+        </div>
+        <div id="nowa-oferta-opis-container">
+        <!-- Oferta -->
+        <div class="neon">
+            <h1 class="neon-text" >NASZA OFERTA</h1>
+        </div>
+        <div class="nowa-oferta" id="nowa-oferta">
+            
+            
+            <div class="marketing-internetowy">
+                <h3>1. Marketing Internetowy</h3>
+                <p>Efektywna strategia online, zwiększająca widoczność Twojej firmy. Oferujemy:</p>
+                <ul>
+                    <li>Kampanie reklamowe</li>
+                    <li>SEO i SEM</li>
+                    <li>Zarządzanie treściami online</li>
+                </ul>
+                <p class="cena">Cena: dostosowana do potrzeb</p>
+                <button onclick="location.href='#marketing-details'">Więcej</button>
+            </div>
+        
+            <div class="tworzenie-stron">
+                <h3>2. Tworzenie Stron Internetowych</h3>
+                <p>Profesjonalne strony, dostosowane do Twoich potrzeb. Oferujemy:</p>
+                <ul>
+                    <li>Strony Onepage</li>
+                    <li>Strony Wielostronicowe</li>
+                    <li>Zarządzanie mediami społecznościowymi</li>
+                </ul>
+                <p class="cena">Cena: dostosowana do projektu</p>
+                <button onclick="location.href='#strony-details'">Więcej</button>
+            </div>
+        
+            
+        </div>
+        
+        
+
+        <!-- Opis Firmy -->
+        <div class="opis" id="opis-firmy">
+            <h1>Webcode - Twój Klucz do Wirtualnego Świata</h1>
+            
+            <div class="zalety">
+                <div class="zaleta">
+                    <h3>Marzenia w Kodzie</h3>
+                    <p>Nasza praca to nie tylko tworzenie stron internetowych czy kampanii marketingowych. To tworzenie marzeń, zamkniętych w kodzie, który staje się Twoim kluczem do wirtualnego świata. Każdy projekt traktujemy jako szansę na odkrycie unikalnej historii Twojej marki i przekazanie jej online w najbardziej efektywny sposób.</p>
+                </div>
+                
+                <div class="zaleta">
+                    <h3>Pocieszenie Twoich Horyzontów</h3>
+                    <p>Wierzymy, że każdy biznes ma potencjał do osiągnięcia więcej online. Dlatego pracujemy nad przeniesieniem Twojego biznesu do szeroko rozumianego internetowego horyzontu. Dzięki naszym rozwiązaniom zyskasz nie tylko nowych klientów, ale także otworzysz się na nowe możliwości rozwoju.</p>
+                </div>
+                
+                <div class="zaleta">
+                    <h3>Innowacje w Kodzie</h3>
+                    <p>Nasz zespół specjalistów nieustannie śledzi najnowsze trendy i technologie, aby zapewnić Ci innowacyjne rozwiązania. Wprowadzamy nowości w kodzie, abyś zawsze był krokiem przed konkurencją.</p>
+                </div>
+            </div>
+            
+            <div class="zalety">
+                <div class="zaleta">
+                    <h3>Skuteczność</h3>
+                    <p>Nasze działania opierają się na solidnych strategiach, które przynoszą realne rezultaty. Pomagamy Ci nie tylko zaistnieć online, ale także zdominować swoją branżę.</p>
+                </div>
+                
+                <div class="zaleta">
+                    <h3>Partnerstwo</h3>
+                    <p>Jesteśmy Twoim partnerem w podróży po wirtualnym świecie. Razem z nami pokonasz każdą przeszkodę, zdobywając nowe horyzonty biznesowe.</p>
+                </div>
+                
+                <div class="zaleta">
+                    <h3>Wszechstronność</h3>
+                    <p>Niezależnie od tego, czy potrzebujesz nowej strony internetowej, kampanii marketingowej czy strategii e-commerce - mamy dla Ciebie kompleksowe rozwiązania.</p>
+                </div>
+            </div>
+            
+            <p>Dołącz do Webcode i otwórz drzwi do nowych możliwości dla swojego biznesu online. Twój klucz do wirtualnego świata już na Ciebie czeka!</p>
+        </div>
+        </div>
+        
+        
+    </div>
+        <!-- Stopka -->
+        <div class="footer">
+            <div class="footer-info">
+                <p>Webcode</p>
+                <p>Adres Firmy</p>
+                <p>Telefon: +123456789</p>
+                <p>Email: kontakt@webcode.pl</p>
+            </div>
+            <div class="footer-oferta">
+                <p>Nazwa Firmy</p>
+                <p>Adres Firmy</p>
+                <p>Telefon: +123456789</p>
+                <p>Email: kontakt@webcode.pl</p>
+            </div>
+            <div class="footer-social-icons">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

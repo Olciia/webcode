@@ -188,7 +188,7 @@ color: #DEAE66;
     align-items: center;
 }
 
-.form-container {
+.form-container{
     display: none;
     position: absolute;
     top: 50%;
@@ -208,7 +208,7 @@ color: #DEAE66;
         display: none;
     }
 
-    .form-container form {
+    .form-container form, .form-container-2 {
         margin: 30px;
         display: flex;
         flex-direction: column;
@@ -226,7 +226,7 @@ color: #DEAE66;
         border: 1px solid black;
     }
 
-    .form-container label {
+    .form-container, .form-container-2 label {
         color: rgb(255, 255, 255);
         font-size: 1.2em;
     }
@@ -245,7 +245,7 @@ color: #DEAE66;
         box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
     }
 
-    .form-container .input-icon {
+    .form-container .input-icon .form-container-2{
         height: 1.3em;
         width: 1.3em;
         fill: white;
@@ -259,7 +259,7 @@ color: #DEAE66;
         color: #d3d3d3;
     }
 
-    .form-container .btn {
+    .form-container .btn ,.form-container-2{
         display: flex;
         flex-direction: column; /* Zmienione na kolumnę */
         justify-content: center;
@@ -279,17 +279,17 @@ color: #DEAE66;
         margin-bottom: 0.5em; /* Dodane odstępy między przyciskami */
     }
 
-    .form-container .button1:hover {
+    .form-container .button1:hover ,.form-container-2{
         background-color: black;
         color: white;
     }
 
-    .form-container .button2 {
+    .form-container .button2 ,.form-container-2{
         background-color: #252525;
         color: white;
     }
 
-    .form-container .button2:hover {
+    .form-container ,.form-container-2 .button2:hover {
         background-color: red;
         color: white;
     }
@@ -297,13 +297,23 @@ color: #DEAE66;
         margin-top: -30%;
     }
 }
-
-.form-container {
+.form2{
+    margin: 40px;
+    background-color: #161616;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px #DEAE66;
+    color: #ffffff;
+}
+.form-container{
     margin: 100px auto; /* Auto - centrowanie poziome, 100px marginesy górny i dolny */
     display: none;
 }
+.form_contener--2{
+    margin: 100px;
+}
 
-.form-container form {
+.form-container form, .form-container-2{
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -318,7 +328,7 @@ color: #DEAE66;
     border: 1px solid black;
 }
 
-.form-container label {
+.form-container label .form-container-2{
     color: rgb(255, 255, 255);
     font-size: 1.2em;
 }
@@ -337,7 +347,7 @@ color: #DEAE66;
     box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
 }
 
-.form-container .input-icon {
+.form-container .input-icon  {
     height: 1.3em;
     width: 1.3em;
     fill: rgb(229, 225, 225);
@@ -351,7 +361,7 @@ color: #DEAE66;
     color: #d3d3d3;
 }
 
-.form-container .btn {
+.form-container .btn, .form-container-2 {
     display: flex;
     flex-direction: column; /* Zmienione na kolumnę */
     justify-content: center;
@@ -359,7 +369,7 @@ color: #DEAE66;
 }
 
 .form-container .button1,
-.form-container .button2 {
+.form-container .button2, .form-container-2 {
     width: 100%;
     padding: 0.5em;
     border-radius: 5px;
@@ -371,17 +381,17 @@ color: #DEAE66;
     margin-bottom: 0.5em;
 }
 
-.form-container .button1:hover {
+.form-container , .form-container-2 .button1:hover {
     background-color: black;
     color: white;
 }
 
-.form-container .button2 {
+.form-container, .form-container-2 .button2 {
     background-color: #252525;
     color: white;
 }
 
-.form-container .button2:hover {
+.form-container , .form-container-2 .button2:hover  {
     background-color: red;
     color: white;
 }
@@ -511,3 +521,205 @@ a:hover {
 }
 
 
+/* strony internetowe css */
+
+#webcode-heading {
+    font-family: 'Arial', sans-serif;
+    font-size: 3em;
+    color: #DEAE66;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(234, 230, 135, 0.5);
+    margin-top: 0;
+}
+
+#webcode-description,
+#webcode-summary {
+    text-align: center;
+    color: #DEAE66;
+}
+
+#rodzaje-stron-heading,
+#dlaczego-nasze-strony-heading,
+#najczesciej-zadawane-pytania-heading,
+#przebieg-wspolpracy-heading,
+#formularz-kontaktowy-heading {
+    color: #DEAE66;
+    text-align: center;
+}
+
+#webcode-summary {
+    margin-top: 20px;
+}
+
+#webcode-heading,
+#rodzaje-stron-heading,
+#dlaczego-nasze-strony-heading,
+#najczesciej-zadawane-pytania-heading,
+#przebieg-wspolpracy-heading,
+#formularz-kontaktowy-heading {
+    color: #DEAE66;
+}
+
+#onepage-list-item,
+#wielopoziomowe-list-item,
+#domena-question,
+#czas-tworzenia-strony-question,
+#responsywnosc-strony-question,
+#rozmowa-z-klientem,
+#projektowanie,
+#realizacja,
+#akceptacja,
+#strona-w-internecie {
+    color: #DEAE66;
+}
+
+#onepage-list-item p,
+#wielopoziomowe-list-item p,
+#webcode-description,
+#domena-question p,
+#czas-tworzenia-strony-question p,
+#responsywnosc-strony-question p {
+    color: #e4d9c8;
+}
+
+.opis {
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+    color: #DEAE66;
+    margin: 0 auto;
+}
+
+.pytania_odpowiedzi {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.pytanie {
+    margin-bottom: 20px;
+}
+
+.pytanie strong {
+    cursor: pointer;
+    display: block;
+}
+
+.pytanie p {
+    display: none;
+}
+
+.arrow-icon {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    transition: transform 0.3s;
+}
+
+
+
+/* Styl dla diva co_oferujemy */
+.onepage-list, .wielopoziomowe-list {
+    margin: 40px;
+    background-color: #161616;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px #DEAE66;
+    color: #ffffff;
+}
+
+#rodzaje-stron-heading {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.onepage-list,
+.wielopoziomowe-list {
+    display: inline-block;
+    width: 48%; /* Ustaw szerokość tak, aby dwie oferty zmieściły się obok siebie z odstępem */
+    margin: 1%; /* Odstęp między ofertami */
+    vertical-align: top; /* Zachowaj wyśrodkowanie pionowe */
+    box-sizing: border-box;
+}
+
+.onepage-list,.wielopoziomowe-list {
+    background-color: #1a1a1a; /* Kolor tła dla oferty Onepage */
+}
+
+#onepage-list-item,
+#wielopoziomowe-list-item {
+    margin-bottom: 20px;
+}
+
+.zaleta-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #DEAE66;
+    color: #161616;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Dodaj media query dla responsywności */
+@media (max-width: 768px) {
+    .onepage-list,
+    .wielopoziomowe-list {
+        width: 100%; /* Zmień szerokość na 100% na mniejszych ekranach */
+        margin: 0 0 20px 0; /* Odstęp między ofertami na mniejszych ekranach */
+    }
+}
+
+#przebieg-wspolpracy-heading {
+    color: #DEAE66;
+    text-align: center;
+    margin-top: 40px; /* Dostosuj wartość w zależności od preferencji */
+}
+
+.przebieg-wspolpracy {
+    margin: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.etap-wspolpracy {
+    margin-bottom: 30px;
+    background-color: #161616;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px #DEAE66;
+    color: #ffffff;
+    position: relative;
+}
+
+.etap-wspolpracy h3 {
+    color: #DEAE66;
+    margin-top: -30px; /* Dostosuj wartość w zależności od preferencji */
+}
+#h3{
+text-shadow: 10px 15px 20px #282828;
+}
+
+.etap-wspolpracy p {
+    color: #e4d9c8;
+}
+
+@media screen and (max-width: 768px) {
+    .etap-wspolpracy {
+        width: 100%;
+        margin: 20px 0;
+    }
+}

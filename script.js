@@ -67,7 +67,15 @@ function saveUserPreferences() {
 }
 
 
+const pytaniaOdpowiedzi = document.querySelector('.pytania_odpowiedzi');
+    pytaniaOdpowiedzi.addEventListener('click', (event) => {
+        if (event.target.tagName === 'STRONG') {
+            const pytanie = event.target.closest('.pytanie');
+            const paragraph = pytanie.querySelector('p');
+            const arrowIcon = pytanie.querySelector('.arrow-icon');
 
-
-
+            paragraph.style.display = paragraph.style.display === 'none' ? 'block' : 'none';
+            arrowIcon.classList.toggle('open');
+        }
+    });
 

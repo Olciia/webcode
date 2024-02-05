@@ -723,3 +723,42 @@ text-shadow: 10px 15px 20px #282828;
         margin: 20px 0;
     }
 }
+
+
+
+#oferta-marketing-heading {
+    font-family: 'Arial', sans-serif;
+    font-size: 3em;
+    color: #DEAE66;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(234, 230, 135, 0.5);
+    margin-top: 0;
+}
+
+.marketing-pakiet-item {
+    margin-bottom: 20px;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px #DEAE66;
+}
+
+.marketing-pakiet-item h3 {
+    color: #DEAE66;
+    text-shadow: 10px 15px 20px #282828;
+}
+
+.marketing-pakiet-item p {
+    color: #e4d9c8;
+}
+
+@media screen and (max-width: 768px) {
+    .marketing-pakiet,
+    .marketing-pakiet-item {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+}

@@ -79,3 +79,18 @@ const pytaniaOdpowiedzi = document.querySelector('.pytania_odpowiedzi');
         }
     });
 
+
+    const informacjeMarketingowe = document.querySelector('.informacje_marketingowe');
+    informacjeMarketingowe.addEventListener('click', (event) => {
+        const strongElement = event.target.closest('strong');
+        
+        if (strongElement) {
+            const pytanie = strongElement.closest('.pytanie');
+            const paragraph = pytanie.querySelector('p');
+            const arrowIcon = pytanie.querySelector('.arrow-icon');
+    
+            paragraph.style.display = paragraph.style.display === 'none' ? 'block' : 'none';
+            arrowIcon.classList.toggle('open');
+        }
+    });
+    

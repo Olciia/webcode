@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <title>Kocham cie </title>
+    <style>
+        .heart {
+            position: relative;
+            width: 100px;
+            height: 90px;
+            margin: 50px auto;
+            background: red;
+            transform: rotate(-45deg);
+            border-radius: 50% 50% 0 0;
+            animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+        }
+        .heart:before,
+        .heart:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 100px;
+            height: 45px;
+            background: red;
+            border-radius: 50px 50px 0 0;
+        }
+        .heart:before {
+            left: 50px;
+        }
+        .heart:after {
+            right: 50px;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1) rotate(-45deg);
+            }
+            50% {
+                transform: scale(0.95) rotate(-45deg);
+            }
+            100% {
+                transform: scale(1) rotate(-45deg);
+            }
+        }
+
+        /* Slider */
+        .slider {
+            width: 100%;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+        .slide-track {
+            display: flex;
+            animation: scroll 20s linear infinite;
+        }
+        .slide {
+            width: 100%;
+            flex-shrink: 0;
+            frame-border: 0;
+        }
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+    <script>
+        const messages = [
+            "Kocham cię za twoje wyjątkowe poczucie humoru.",
+            "Kocham cię za twoją zdolność do zrozumienia mnie bez słów.",
+            // Tutaj dodaj resztę wiadomości...
+        ];
+
+        function getRandomMessage() {
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            alert(messages[randomIndex]);
+        }
+    </script>
+</head>
+<body>
+    <main class="container">
+        <section id="heart">
+            <hgroup>
+                <h2>Kocham Cię za...</h2>
+                <h3>Naciśnij, by losować miłosne wiadomości</h3>
+            </hgroup>
+            <div class="heart" onclick="getRandomMessage()"></div>
+        </section>
+        <div class="grid">
+            <section id="slideshow">
+                <hgroup>
+                    <h2>Slajdowisko</h2>
+                    <h3>Zdjęcia nas dwoje</h3>
+                </hgroup>
+                <div class="slider">
+                    <div class="slide-track">
+                        <img src="https://source.unsplash.com/random/1" class="slide">
+                        <img src="https://source.unsplash.com/random/2" class="slide">
+                        <!-- Dodaj więcej zdjęć tutaj -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+</body>
+</html>

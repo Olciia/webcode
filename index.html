@@ -24,7 +24,12 @@
     </div>
     <div class="menu">
         <ul>  
-            <li><a href="#nowa-oferta">Oferta</a></li>
+            <li><a href="#nowa-oferta">Oferta</a>
+                <ul class="submenu">
+                    <li><a href="marketing.html">Marketing</a></li>
+                    <li><a href="strony_internetowe.html">Strony internetowe</a></li>
+                </ul>
+            </li>
             <li><a href="portfoli.html">Portfolio</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
@@ -51,33 +56,45 @@
             <button onclick="showForm()">Zapytaj o wycenę</button>
         </div>
         </div>
-        <div class="form-container" id="formContainer">
-            <form class="form">
-              <label for="name" class="label">Imię:</label>
-              <input type="text" id="name" name="name" class="field" required>
-          
-              <label for="surname" class="label">Nazwisko:</label>
-              <input type="text" id="surname" name="surname" class="field" required>
-          
-              <label for="phone" class="label">Numer telefonu:</label>
-              <input type="tel" id="phone" name="phone" class="field" required>
-          
-              <label for="email" class="label">Adres e-mail:</label>
-              <input type="email" id="email" name="email" class="field" required>
-          
-              <label for="subject" class="label">Temat zapytania:</label>
-              <input type="text" id="subject" name="subject" class="field" required>
-          
-              <label class="label">
-                <input type="checkbox" class="checkbox" required> Akceptuję regulamin
-              </label>
-          
-              <div class="btn">
-                <button type="submit" class="button1">Wyślij</button>
-                <button type="button" onclick="hideForm()" class="button2">Anuluj</button>
-              </div>
+        <div class="form-container-2" id="formContainer-2--1">
+            <form id="kontakt-form" action="/submit" method="post">
+                <div class="user-box">
+                    <input type="text" id="name" name="name" class="field" required placeholder=" ">
+                    <label for="name" class="label">Imię:</label>
+                </div>
+                
+                <div class="user-box">
+                    <input type="text" id="surname" name="surname" class="field" required placeholder=" ">
+                    <label for="surname" class="label">Nazwisko:</label>
+                </div>
+                
+                <div class="user-box">
+                    <input type="tel" id="phone" name="phone" class="field" required placeholder=" ">
+                    <label for="phone" class="label">Numer telefonu:</label>
+                </div>
+                
+                <div class="user-box">
+                    <input type="email" id="email" name="email" class="field" required placeholder=" ">
+                    <label for="email" class="label">Adres e-mail:</label>
+                </div>
+                
+                <div class="user-box">
+                    <input type="text" id="subject" name="subject" class="field" required placeholder=" ">
+                    <label for="subject" class="label">Temat zapytania:</label>
+                </div>
+                
+                <div class="user-box checkbox-container">
+                    <input type="checkbox" id="agree" name="agree" class="checkbox" required>
+                    <label for="agree" class="checkbox-label">Akceptuję regulamin</label>
+                </div>
+                
+                <div class="btn">
+                    <button type="submit" class="button1">Wyślij</button>
+                    <button type="button" class="button2" onclick="hideForm()">Anuluj</button>
+                </div>
             </form>
-          </div>          
+        </div>
+        
         <div class="social-icons">
             <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
             <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>

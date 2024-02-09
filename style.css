@@ -39,6 +39,34 @@ body {
     margin-top: 10px;
 
 }
+.menu ul .submenu {
+    display: none;
+    position: absolute;
+    /* Ustaw pozycję absolutną, aby zapobiec przesuwaniu się menu */
+}
+
+.menu ul li {
+    position: relative;
+    /* Ustaw pozycję względną, aby menu potomne było pozycjonowane względem tego elementu */
+}
+
+.menu ul li:hover .submenu {
+    display: block;
+    /* Pokaż podmenu po najechaniu na pozycję w menu */
+}
+
+/* Dodatkowy styl dla pozycji w podmenu */
+.menu ul .submenu li {
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+
+/* Dodatkowy styl dla linków w podmenu */
+.menu ul .submenu li a {
+    color: #333;
+    text-decoration: none;
+}
+
 
 ul {
     list-style: none;
@@ -157,7 +185,6 @@ color: #DEAE66;
 
 
 
-
 .footer {
     background-color: #333;
     color: #fff;
@@ -188,215 +215,79 @@ color: #DEAE66;
     align-items: center;
 }
 
-.form-container{
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-}
-
-@media only screen and (max-width: 768px) {
-    .main-button {
-        text-align: center;
-        margin: 2em;
-    }
-
-    .form-container {
-        margin: 0;
-        display: none;
-    }
-
-    .form-container form, .form-container-2 {
-        margin: 30px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        padding-left: 2em;
-        padding-right: 2em;
-        padding-bottom: 0.4em;
-        background-color: #171717;
-        border-radius: 25px;
-        transition: .4s ease-in-out;
-    }
-
-    .form-container form:hover {
-        transform: scale(2.05);
-        border: 1px solid black;
-    }
-
-    .form-container, .form-container-2 label {
-        color: rgb(255, 255, 255);
-        font-size: 1.2em;
-    }
-
-    .form-container .field {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5em;
-        border-radius: 25px;
-        padding: 0.6em;
-        border: none;
-        outline: none;
-        color: white;
-        background-color: #171717;
-        box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
-    }
-
-    .form-container .input-icon .form-container-2{
-        height: 1.3em;
-        width: 1.3em;
-        fill: white;
-    }
-
-    .form-container .input-field {
-        background: none;
-        border: none;
-        outline: none;
-        width: 100%;
-        color: #d3d3d3;
-    }
-
-    .form-container .btn ,.form-container-2{
-        display: flex;
-        flex-direction: column; /* Zmienione na kolumnę */
-        justify-content: center;
-        margin-top: 2.5em;
-    }
-
-    .form-container .button1,
-    .form-container .button2 {
-        width: 100%; /* Rozciągnięte na pełną szerokość */
-        padding: 0.5em;
-        border-radius: 5px;
-        border: none;
-        outline: none;
-        transition: .4s ease-in-out;
-        background-color: #252525;
-        color: white;
-        margin-bottom: 0.5em; /* Dodane odstępy między przyciskami */
-    }
-
-    .form-container .button1:hover ,.form-container-2{
-        background-color: black;
-        color: white;
-    }
-
-    .form-container .button2 ,.form-container-2{
-        background-color: #252525;
-        color: white;
-    }
-
-    .form-container ,.form-container-2 .button2:hover {
-        background-color: red;
-        color: white;
-    }
-    .main-content{
-        margin-top: -30%;
-    }
-}
-.form2{
-    margin: 40px;
-    background-color: #161616;
-    padding: 20px;
+.form-container-2 {
+    max-width: 800px;
+    padding: 40px;
+    margin: 40px auto;
+    background: rgba(24, 20, 20, 0.987);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius: 10px;
-    box-shadow: 0px 5px 20px #DEAE66;
-    color: #ffffff;
-}
-.form-container{
-    margin: 100px auto; /* Auto - centrowanie poziome, 100px marginesy górny i dolny */
+  }
+  .kontakt-form{
+    margin-right: 1300px;
+  }
+  
+  .user-box {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+  
+  .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .user-box input:focus ~ label,
+  .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #bdb8b8;
+    font-size: 12px;
+  }
+
+  #formContainer-2--1 {
     display: none;
 }
-.form_contener--2{
-    margin: 100px;
-}
 
-.form-container form, .form-container-2{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 20px; /* Dodane paddingi */
-    background-color: #171717;
-    border-radius: 25px;
-    transition: .4s ease-in-out;
-}
-
-.form-container form:hover {
-    transform: scale(1.05);
-    border: 1px solid black;
-}
-
-.form-container label .form-container-2{
-    color: rgb(255, 255, 255);
-    font-size: 1.2em;
-}
-
-.form-container .field {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5em;
-    border-radius: 25px;
-    padding: 0.6em;
-    border: none;
-    outline: none;
-    color: white;
-    background-color: #171717;
-    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
-}
-
-.form-container .input-icon  {
-    height: 1.3em;
-    width: 1.3em;
-    fill: rgb(229, 225, 225);
-}
-
-.form-container .input-field {
-    background: none;
-    border: none;
-    outline: none;
-    width: 100%;
-    color: #d3d3d3;
-}
-
-.form-container .btn, .form-container-2 {
-    display: flex;
-    flex-direction: column; /* Zmienione na kolumnę */
-    justify-content: center;
-    margin-top: 2.5em;
-}
-
-.form-container .button1,
-.form-container .button2, .form-container-2 {
-    width: 100%;
-    padding: 0.5em;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    transition: .4s ease-in-out;
-    background-color: #252525;
-    color: white;
-    margin-bottom: 0.5em;
-}
-
-.form-container , .form-container-2 .button1:hover {
-    background-color: black;
-    color: white;
-}
-
-.form-container, .form-container-2 .button2 {
-    background-color: #252525;
-    color: white;
-}
-
-.form-container , .form-container-2 .button2:hover  {
-    background-color: red;
-    color: white;
-}
-
-
+.form-container-2{
+    width: 70%;
+  }
+  
+  /* Dodanie responsywności */
+  @media (max-width: 480px) {
+    .form-container-2 {
+      padding: 20px;
+      margin: 20px;
+    }
+  
+    .user-box label {
+      font-size: 14px;
+    }
+  
+    .user-box input:focus ~ label,
+    .user-box input:valid ~ label {
+      font-size: 10px;
+    }
+  }
+  
 
 #nowa-oferta {
     display: grid;
@@ -515,7 +406,7 @@ a:hover {
     }
 
     .zaleta {
-        width: 100%;
+        width: 98%;
         margin: 30px 0; /* Poprawione, aby zachować jednolitość */
     }
 }
@@ -584,6 +475,7 @@ a:hover {
 #responsywnosc-strony-question p {
     color: #e4d9c8;
 }
+
 
 .opis {
     text-align: center;
@@ -677,7 +569,7 @@ ul {
 /* Dodaj media query dla responsywności */
 @media (max-width: 768px) {
     .onepage-list,
-    .wielopoziomowe-list {
+    .wielopoziomowe-list{
         width: 100%; /* Zmień szerokość na 100% na mniejszych ekranach */
         margin: 0 0 20px 0; /* Odstęp między ofertami na mniejszych ekranach */
     }
@@ -719,8 +611,7 @@ text-shadow: 10px 15px 20px #282828;
 
 @media screen and (max-width: 768px) {
     .etap-wspolpracy {
-        width: 100%;
-        margin: 20px 0;
+        width: 90%;
     }
 }
 
@@ -751,14 +642,115 @@ text-shadow: 10px 15px 20px #282828;
     text-shadow: 10px 15px 20px #282828;
 }
 
-.marketing-pakiet-item p {
-    color: #e4d9c8;
+.marketing-pakiet-item li, .marketing-pakiet-item p{
+color: #ccc;
 }
+
+
 
 @media screen and (max-width: 768px) {
     .marketing-pakiet,
     .marketing-pakiet-item {
-        width: 100%;
-        margin: 0 0 20px 0;
+        justify-content: center;
+        width: 98%;
+        margin-top: 25px;
     }
 }
+.dlaczego-my-marketing {
+    background-color: #1a1a1a; /* ciemne tło dla kontrastu */
+    padding: 40px; /* zwiększony padding dla lepszej czytelności */
+    border-radius: 15px; /* delikatne zaokrąglenie rogów dla nowoczesnego wyglądu */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* subtelny cień dla głębi */
+    color: #e4d9c8; /* kolor tekstu */
+    margin: 40px auto; /* centrowanie i odstępy od innych sekcji */
+    max-width: 800px; /* ograniczenie szerokości dla lepszej czytelności */
+}
+
+#dlaczego-nasze-strony-heading {
+    color: #DEAE66; /* zachowanie koloru tekstu */
+    margin-bottom: 20px; /* odstęp od paragrafu */
+    font-size: 2.5em; /* powiększenie dla lepszej widoczności */
+    text-align: center; /* centrowanie tytułu */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* delikatny cień dla głębi */
+}
+
+#webcode-description {
+    font-size: 1.1em; /* delikatne powiększenie tekstu */
+    margin-bottom: 30px; /* większy odstęp od przycisku */
+    line-height: 1.7; /* zwiększenie interlinii dla lepszej czytelności */
+    text-align: justify; /* wyrównanie tekstu do szerokości */
+}
+
+.cta-button {
+    text-decoration: none; /* usunięcie podkreślenia */
+    background-color: #DEAE66; /* kolor tła przycisku */
+    color: #1a1a1a; /* kolor tekstu przycisku */
+    padding: 10px 20px; /* padding przycisku */
+    border-radius: 5px; /* delikatne zaokrąglenie rogów przycisku */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* delikatny cień dla przycisku */
+    transition: background-color 0.3s, color 0.3s; /* animacja dla interakcji z przyciskiem */
+}
+
+.cta-button:hover {
+    background-color: #e4d9c8; /* zmiana koloru tła przy najechaniu */
+    color: #fffefe; /* zmiana koloru tekstu przy najechaniu */
+}
+
+.unique-features {
+    list-style: none; /* usunięcie domyślnego stylu listy */
+    padding: 0; /* usunięcie domyślnego paddingu */
+    margin-bottom: 20px; /* odstęp od przycisku CTA */
+}
+
+.unique-features li {
+    margin-bottom: 10px; /* odstęp między punktami listy */
+    font-size: 1em; /* rozmiar czcionki */
+}
+
+.unique-features strong {
+    color: #DEAE66; /* kolor dla wyróżnienia kluczowych słów */
+}
+
+
+
+
+/* Dostosowanie do różnych szerokości ekranu */
+@media screen and (max-width: 768px) {
+    .marketing-pakiet-item {
+        padding: 10px;
+    }
+}
+
+/* Dodatkowe dostosowanie dla małych ekranów */
+@media screen and (max-width: 480px) {
+    .marketing-pakiet-item {
+        margin: 10px;
+    }
+}
+
+
+
+
+.kontakt-container {
+    display: flex;
+    color: #ccc;
+    font-size: 2rem;
+    width: 100;
+  }
+
+  .form-container-2{
+    width: 70%;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .kontakt-container {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+      flex-direction: column;
+    }
+  }
+  
+  .apouter{
+    width: 100%;
+  }

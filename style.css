@@ -361,7 +361,7 @@ a:hover {
 }
 
 .opis {
-    width: 100%;
+    width: 98%;
     text-align: center;
     padding: 20px;
     color: #DEAE66;
@@ -379,20 +379,6 @@ a:hover {
     color: #ffffff;
 }
 
-@media screen and (max-width: 768px) {
-    .zalety {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .zaleta {
-        width: 98%;
-        margin: 30px 0; /* Adjusted margin for uniformity */
-        flex-basis: auto; /* Reset flex-basis for mobile view */
-        max-width: none; /* Remove max-width constraint for mobile */
-    }
-}
-
 .zalety {
     display: flex;
     flex-direction: row ;
@@ -405,6 +391,28 @@ a:hover {
     padding: 15px;
 
 }
+
+@media screen and (max-width: 768px) {
+    .zalety {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .zaleta {
+        margin: 20px 0; /* Adjusted margin for uniformity */
+        flex-basis: auto; /* Reset flex-basis for mobile view */
+        max-width: none; /* Remove max-width constraint for mobile */
+    }
+    .opis {
+        width: 92%;
+        text-align: center;
+        padding: 20px;
+        color: #DEAE66;
+        margin: 0 auto; /* Dodane, aby zawartość była wyśrodkowana */
+    }
+}
+
+
 
 
 /* strony internetowe css */

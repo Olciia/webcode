@@ -123,18 +123,21 @@ a {
     margin-right: 15px;
 }
 
-.social-icons a {
+.social-icons a, .ikonki {
     text-decoration: none;
     color: #c5c5c5;
     margin-bottom: 15px;
 }
 
-.social-icons i {
+.social-icons i, .iconki i  {
     font-size: 40px;
     
 }
-.social-icons a:hover{
+.social-icons, .iconki  a:hover{
 color: #DEAE66;
+}
+.iconki i{
+    font-size: 24px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -166,14 +169,14 @@ color: #DEAE66;
     li {
         margin: 10px 0;
     }
-    .social-icons i {
+    .social-icons i, .iconki i{
         margin-left: 10px;
         font-size: 30px;
         background-color: rgba(0, 255, 255, 0);
     }
 }
 
-.social-icons i {
+.social-icons i, .iconki i{
     font-size: 40px;
     background-color: rgba(0, 255, 255, 0);
 }
@@ -185,29 +188,7 @@ color: #DEAE66;
 
 
 
-.footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
-.footer-info {
-    flex: 1;
-    text-align: left;
-}
-
-.footer-social-icons {
-    display: flex;
-}
-
-.footer-social-icons a {
-    color: #fff;
-    text-decoration: none;
-    margin-right: 15px;
-}
 
 .main-button {
     display: flex;
@@ -302,7 +283,7 @@ color: #DEAE66;
     text-align: center;
   }
   
-  .marketing-internetowy,
+  .marketing-internetowy-2,
   .tworzenie-stron{
     margin: 18.9px;
     background-color: #161616;
@@ -371,9 +352,6 @@ a:hover {
     /* Cień wewnętrzny */
     text-shadow: 2px 2px 4px rgba(234, 230, 135, 0.5);
 }
-
-
- 
 .zaleta h3 {
     color: #DEAE66;
 }
@@ -381,23 +359,25 @@ a:hover {
 .zaleta p {
     color: #e4d9c8;
 }
- 
 
- .opis {
+.opis {
+    width: 100%;
     text-align: center;
-    max-width: 800px;
     padding: 20px;
     color: #DEAE66;
     margin: 0 auto; /* Dodane, aby zawartość była wyśrodkowana */
 }
-.zaleta{
-    margin: 40px;
+
+
+
+.zaleta {
+    margin: 20px; /* Adjusted margin for better spacing */
     background-color: #161616;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 5px 20px #DEAE66;
+    box-shadow: 0 5px 20px #DEAE66;
     color: #ffffff;
-  }
+}
 
 @media screen and (max-width: 768px) {
     .zalety {
@@ -407,8 +387,23 @@ a:hover {
 
     .zaleta {
         width: 98%;
-        margin: 30px 0; /* Poprawione, aby zachować jednolitość */
+        margin: 30px 0; /* Adjusted margin for uniformity */
+        flex-basis: auto; /* Reset flex-basis for mobile view */
+        max-width: none; /* Remove max-width constraint for mobile */
     }
+}
+
+.zalety {
+    display: flex;
+    flex-direction: row ;
+    margin-bottom: 20px;
+}
+
+.zaleta {
+    width: 90%;
+    margin-bottom: 20px;
+    padding: 15px;
+
 }
 
 
@@ -573,6 +568,18 @@ ul {
         width: 100%; /* Zmień szerokość na 100% na mniejszych ekranach */
         margin: 0 0 20px 0; /* Odstęp między ofertami na mniejszych ekranach */
     }
+    .pytania_odpowiedzi{
+        margin: 30px;
+    }
+}
+
+.checkbox-label{
+    margin: 5px 0 0 20px;
+    padding: 10px;
+}
+
+#iconka{
+    size: 100px;
 }
 
 #przebieg-wspolpracy-heading {
@@ -629,13 +636,7 @@ text-shadow: 10px 15px 20px #282828;
     margin-top: 0;
 }
 
-.marketing-pakiet-item {
-    margin-bottom: 20px;
-    background-color: #1a1a1a;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 5px 20px #DEAE66;
-}
+
 
 .marketing-pakiet-item h3 {
     color: #DEAE66;
@@ -656,24 +657,6 @@ color: #ccc;
         margin-top: 25px;
     }
 }
-.dlaczego-my-marketing {
-    background-color: #1a1a1a; /* ciemne tło dla kontrastu */
-    padding: 40px; /* zwiększony padding dla lepszej czytelności */
-    border-radius: 15px; /* delikatne zaokrąglenie rogów dla nowoczesnego wyglądu */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* subtelny cień dla głębi */
-    color: #e4d9c8; /* kolor tekstu */
-    margin: 40px auto; /* centrowanie i odstępy od innych sekcji */
-    max-width: 800px; /* ograniczenie szerokości dla lepszej czytelności */
-}
-
-#dlaczego-nasze-strony-heading {
-    color: #DEAE66; /* zachowanie koloru tekstu */
-    margin-bottom: 20px; /* odstęp od paragrafu */
-    font-size: 2.5em; /* powiększenie dla lepszej widoczności */
-    text-align: center; /* centrowanie tytułu */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* delikatny cień dla głębi */
-}
-
 #webcode-description {
     font-size: 1.1em; /* delikatne powiększenie tekstu */
     margin-bottom: 30px; /* większy odstęp od przycisku */
@@ -754,3 +737,180 @@ color: #ccc;
   .apouter{
     width: 100%;
   }
+
+  .footer {
+    background-color: #161616;
+    color: #DEAE66;
+    padding: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px; /* Zwiększona przestrzeń między elementami */
+}
+
+.footer h2,
+.footer h3 {
+    color: #DEAE66;
+    margin-bottom: 15px; /* Dodaje odstęp pod nagłówkami */
+}
+
+.footer a {
+    color: #DEAE66;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px; /* Zwiększona minimalna szerokość kolumny dla lepszej czytelności */
+    max-width: 33%; /* Dodane, aby ograniczyć szerokość kolumn na większych ekranach */
+}
+
+/* Style dla list */
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer form button {
+    background-color: #DEAE66;
+    color: #161616;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.footer form button:hover {
+    background-color: #d9a056;
+}
+
+/* Ikony mediów społecznościowych */
+.footer .social-icons {
+    display: flex;
+    justify-content: space-evenly; /* Równomierne rozmieszczenie ikon */
+    align-items: center;
+    margin-top: 20px; /* Odstęp od innych sekcji */
+}
+
+.footer .social-icons a {
+    color: #DEAE66;
+    font-size: 24px; /* Adjust icon size */
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .footer footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px; /* Dodaje odstęp między sekcjami w trybie kolumnowym */
+    }
+
+    .footer .social-icons {
+        margin-left: 0;
+        color: #DEAE66;
+        font-size: 34px;
+    }
+
+    /* Nowy warunek dla podziału na dwie kolumny */
+    @media (max-width: 480px) {
+        .footer-section {
+            max-width: 48%; /* Mniejsza szerokość dla lepszego dopasowania do dwóch kolumn */
+        }
+    }
+}
+
+/* Zakładając, że inne style są już ustawione, i chcemy tylko upewnić się, że usługi są wyświetlane pionowo */
+.footer-section ul {
+    display: flex;
+    flex-direction: column; /* Zapewnia, że elementy listy będą wyświetlane jeden pod drugim */
+}
+
+.footer-section ul li {
+    margin-bottom: 10px; /* Dodaje odstęp pomiędzy elementami listy */
+}
+
+.co_oferujemy {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Rozkłada elementy równomiernie z zachowaniem przestrzeni na zewnątrz */
+    gap: 20px; /* Odstępy między kafelkami */
+}
+
+.marketing-pakiet-item {
+    flex-basis: calc(40% - 20px); /* Szerokość dla 3 elementów w linii, odjęcie 20px na odstępy */
+    display: flex; /* Umożliwia zastosowanie flexboxa dla wewnętrznego div */
+    flex-direction: column; /* Elementy wewnętrzne układają się pionowo */
+    align-items: center; /* Wyśrodkowanie zawartości w pionie */
+    background-color: #161616;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px #DEAE66;
+    color: #ffffff;
+}
+
+
+
+@media (max-width: 768px) {
+    .marketing-pakiet-item {
+        flex-basis: calc(50% - 20px); /* Na mniejszych ekranach 2 elementy w linii */
+    }
+}
+
+@media (max-width: 480px) {
+    .co_oferujemy {
+        flex-direction: column;
+    }
+    .marketing-pakiet-item {
+        flex-basis: 100%; /* Na bardzo małych ekranach każdy element zajmuje pełną szerokość */
+    }
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    margin: 20px 0;
+}
+.carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel-item img {
+    max-width: 150px; /* Adjust based on preference */
+    height: auto;
+    padding: 10px;
+}
+@keyframes slide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    95% { transform: translateX(-300%); }
+    100% { transform: translateX(0); }
+}
+.carousel-inner {
+    display: flex;
+    width: 100%;
+    animation: slide 10s infinite;
+}
+  

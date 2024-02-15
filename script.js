@@ -19,11 +19,11 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function showForm() {
-    document.getElementById('formContainer-2--1').style.display = 'flex';
+    document.getElementById('form-container-2').style.display = 'flex';
 }
   
 function hideForm() {
-    document.getElementById('formContainer-2--1').style.display = 'none';
+    document.getElementById('form-container-2').style.display = 'none';
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -85,3 +85,4 @@ const pytaniaOdpowiedzi = document.querySelector('.pytania_odpowiedzi');
         });
     });
 
+   
